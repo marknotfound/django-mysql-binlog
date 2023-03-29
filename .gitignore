@@ -1,2 +1,4 @@
 dist
 django_mysql_binlog.egg-info
+venv
+__pycache__

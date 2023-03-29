@@ -15,3 +15,10 @@ Quick start
         ...
         'mysql_binlog',
     ]
+
+Running Tests
+-----------
+1. Create a virtual environment: `python -m venv venv`
+2. Activate the virtual environment: `source venv/bin/activate`
+3. Install the requirements: `pip install -r requirements/test.txt`
+4. Run the tests `python runtests.py`
