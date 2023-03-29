@@ -1,0 +1,2 @@
+class EmptyRegistryException(Exception):
+    pass

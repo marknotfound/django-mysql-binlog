@@ -23,6 +23,11 @@ class Registry:
     def get_model_for_table(self, table: str) -> _M:
         return self.table_models[table]
 
+    def reset(self):
+        self.models = set()
+        self.tables = set()
+        self.table_models = dict()
+
 
 registry = Registry()
 
