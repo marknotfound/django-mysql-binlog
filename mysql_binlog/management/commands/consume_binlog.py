@@ -38,7 +38,11 @@ class Command(BaseCommand):
         if not registry.tables:
             raise EmptyRegistryException("No models registered for binlog consumption")
 
-        database = settings.DATABASES["default"]
+        database_config = "default"
+        print("Registered models: ")
+        print("\n- ".join(registry.tables))
+        print(f"Starting binlog consumer with database '{database_config}'")
+        database = settings.DATABASES[database_config]
         stream = BinLogStreamReader(
             connection_settings={
                 "host": database["HOST"],
